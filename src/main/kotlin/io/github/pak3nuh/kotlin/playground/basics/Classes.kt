@@ -55,20 +55,26 @@ class MaleStudent: MaleWorker()
 * the declared properties.
 *
 * A property is declared by specifying the mutability, name and type, which can be inferred:
-* var studentName = "John Doe"
-*
+* */
+var studentName = "John Doe"
+/*
 * There are defaults that can be overridden like visibility, explicit types and getter/setter. Next there is an example
 * of the same property but with all the defaults explicitly written:
-* public var studentName: String = "John Doe"
-*   get() {
-*       // "field" is the name of an auto-generated backing field
-*       return field
-*   }
-*   set(value) {
-*       field = value
-*   }
+*/
+var studentName2: String = "John Doe"
+   get() {
+       // "field" is the name of an auto-generated backing field
+       return field
+   }
+   set(value) {
+       field = value
+   }
+
+/* Properties can be overridden in extended classes, increase visibility and even add mutability.
 *
-* Properties can be overridden in extended classes, increase visibility and even add mutability.
+* Properties are also inferred from a typical POJO class using the `get` and `set` method name convention. If a Java
+* class has methods with this convention, we can use the property syntax in Kotlin and it works the other way around
+* as well.
 * */
 
 /**
@@ -198,26 +204,3 @@ open class Duplex: House() {
     public override var owner: MaleStudent = MaleStudent()
     override fun toJson(): String = """{ "type": "Duplex", "numberOfStories": 2, "owner": "MaleStudent" }"""
 }
-
-
-/*
-* -------- Companion objects
-* A class may contain a special object definition called `Companion`. This object is shared across all instances
-* of the class it is defined.
-*
-* A companion object is something like an extension to a class without being bound to a specific instance. It can
-* mimic the same behavior of static methods on Java.
-*
-* A companion object is defined by the keyword `companion` and can be accessed without explicitly being referenced
-* like in the next example
-* class Rectangle(val width: Int, val height: Int) {
-*   companion {
-*       fun square(size: Int): Rectangle = Rectangle(size, size)
-*   }
-* }
-*
-* val square = Rectangle.square(5)
-* val otherSquare = Rectangle.Companion.square(10)
-* */
-
-
