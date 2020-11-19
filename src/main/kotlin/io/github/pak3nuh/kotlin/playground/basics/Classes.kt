@@ -75,7 +75,26 @@ var studentName2: String = "John Doe"
 * Properties are also inferred from a typical POJO class using the `get` and `set` method name convention. If a Java
 * class has methods with this convention, we can use the property syntax in Kotlin and it works the other way around
 * as well.
+*
+* -------- lateinit modifier
+* Every non abstract property must be initialized in a constructor or with an initialization expression, but sometimes
+* we don't want to say the property is nullable just because it hasn't been initialized.
+*
+* For such cases we have the `lateinit` modifier. Whe it is used, the property can't be initialized immediately, but
+* it will also fail if we try to access an uninitialized property. Obviously every late initialized property must be
+* mutable because we need to set it's value later, so `lateinit val` is forbidden.
 * */
+
+class LateinitExample {
+    lateinit var value: Any
+}
+fun lateinitExample() {
+    val lateinitExample = LateinitExample()
+    // lateinitExample.value // runtime exception
+    lateinitExample.value = 1
+    println(lateinitExample.value)
+}
+
 
 /**
  * Change the class to have the following properties
