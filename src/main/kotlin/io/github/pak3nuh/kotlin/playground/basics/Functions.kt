@@ -7,4 +7,5 @@ package io.github.pak3nuh.kotlin.playground.basics
 * function literals
 * reified
 * tailrec
+* builder pattern style
 * */
