@@ -5,11 +5,6 @@ import kotlin.properties.ReadOnlyProperty
 import kotlin.properties.ReadWriteProperty
 import kotlin.reflect.KProperty
 
-/*
-type delegation
-property delegation
- */
-
 /* Delegation is a software design pattern where we pass method calls through an intermediate before dispatching it
 * to the real target. It is tha basis for patterns like Interceptor, Proxy, Adapter and more.
 *
