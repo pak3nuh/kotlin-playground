@@ -1,5 +1,6 @@
 package io.github.pak3nuh.kotlin.playground.basics
 
+import io.github.pak3nuh.kotlin.playground.basics.CallableTransmogrifier.Splitter
 import java.time.LocalTime
 import java.time.format.DateTimeFormatter
 
@@ -211,6 +212,16 @@ class KotlinTransmogrifier {
 fun Any.printMe() {
     println(this)
 }
+/* -------- Infix functions
+* If you a person that likes poetry Kotlin also has you covered.
+* Infix functions are way for defining functions that are written like plain text and still evaluate something.
+*
+* We can only define `infix` functions bound to actual types, being a member or extension function.
+* */
+infix fun Int.adding(other: Int) = this + other
+infix fun Int.wrapped(wraps: String) = "$wraps$this$wraps"
+
+val poetry = 3 adding 2 wrapped "!" // evaluates to "!5!"
 /*-------- Scope functions
 * Lastly, scope function are just functions defined in the standard library that use the above features to
 * make our life easier.
