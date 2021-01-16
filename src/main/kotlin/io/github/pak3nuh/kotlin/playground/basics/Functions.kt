@@ -237,4 +237,38 @@ val poetry = 3 adding 2 wrapped "!" // evaluates to "!5!"
 * |let      |N/A        |T          |R      |
 *
 * All of them are defined in the file `Standard.kt`.
+*
+* -------- Operators
+* A special kind of functions in Kotlin are operators.
+* An operator is composed of a specific signature that the compiler will recognize for specific symbols or keywords.
+*
+* For instance, `+` maps to the `plus` function with an argument. We can define more than one `plus` override
+* if we want. Function resolution rules apply.
 * */
+class Pack(val wolves: MutableList<Wolf>) {
+    operator fun plus(wolf: Wolf): Pack {
+        wolves.add(wolf)
+        return this
+    }
+    operator fun plus(pack: Pack): Pack {
+        return Pack((this.wolves + pack.wolves).toMutableList())
+    }
+}
+class Wolf {
+    operator fun plus(wolf: Wolf): Pack {
+        return Pack(mutableListOf(this, wolf))
+    }
+    operator fun plus(pack: Pack): Pack {
+        return pack + this
+    }
+}
+/*
+* Operator functions can be defined as member functions or extension functions, but there is a limited set of available
+* operators and we aren't allowed to add more, unlike languages like Skala
+*
+* A list of operators that we can overload is at https://kotlinlang.org/docs/reference/operator-overloading.html
+* */
+operator fun Pack.minus(wolf: Wolf): Pack {
+    this.wolves.remove(wolf)
+    return this
+}
