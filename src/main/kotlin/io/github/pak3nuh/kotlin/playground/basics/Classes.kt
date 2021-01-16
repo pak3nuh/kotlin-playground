@@ -8,7 +8,7 @@ package io.github.pak3nuh.kotlin.playground.basics
 * enum -> enumerated values that are guaranteed to be a single instance of each
 * abstract -> a class that cannot be instantiated (implicitly open)
 * sealed -> a class hierarchy root where all inheritors are known at compile time
-* inline -> a synthetic class "boxes" a single value and the compiler optimizes the use cases
+* inline -> a synthetic class "boxes" a single value and the compiler optimizes the use cases (experimental)
 * data -> a data holder that automatically generates code for equals(), hashCode(), a copy constructor and deconstructing
 *
 * A class can inherit from another by invoking the super class constructor when is defined.
