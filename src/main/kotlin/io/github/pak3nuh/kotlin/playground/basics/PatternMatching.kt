@@ -69,5 +69,6 @@ fun processMessage(message: Message) {
 * the assertion on the rest of the code.
 *
 * Currently the Contracts API is in experimental status, but it is quite stable and is unlikely to be removed without,
-* any replacement, but use at your own risk.
+* any replacement, but use at your own risk. See https://kotlinlang.org/docs/reference/evolution/components-stability.html
+* for the stability of each Kotlin component.
 * */
