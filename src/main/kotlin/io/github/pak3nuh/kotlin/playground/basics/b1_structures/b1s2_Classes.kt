@@ -1,4 +1,4 @@
-package io.github.pak3nuh.kotlin.playground.basics
+package io.github.pak3nuh.kotlin.playground.basics.b1_structures
 
 /* Kotlin classes are like any other OO programming language. They serve as encapsulation units that
 * may contain state (fields and properties) and behavior (functions).

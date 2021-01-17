@@ -1,4 +1,4 @@
-package io.github.pak3nuh.kotlin.playground.basics
+package io.github.pak3nuh.kotlin.playground.basics.b1_structures
 
 /* ------------------------------ PRIMITIVES ----------------------------------
 * Primitives are the base building blocks of any language. Every data structure is build by combining the existing
@@ -68,7 +68,7 @@ fun listOfAllPrimitiveTypes(): List<Any> = listOf()
  * A Pair that contains the same instance of the same type
  */
 fun pairWithSameReference(): Pair<Any,Any> {
-    // `val` means variable/field/property that can only be assigned once
+    // `val` means data that can only be assigned once
     val instance = TODO()
     val sameInstance = TODO()
     return Pair(instance, sameInstance)

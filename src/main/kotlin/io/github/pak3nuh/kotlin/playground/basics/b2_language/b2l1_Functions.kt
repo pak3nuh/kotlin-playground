@@ -1,6 +1,6 @@
-package io.github.pak3nuh.kotlin.playground.basics
+package io.github.pak3nuh.kotlin.playground.basics.b2_language
 
-import io.github.pak3nuh.kotlin.playground.basics.CallableTransmogrifier.Splitter
+import io.github.pak3nuh.kotlin.playground.basics.b2_language.CallableTransmogrifier.Splitter
 import java.time.LocalTime
 import java.time.format.DateTimeFormatter
 

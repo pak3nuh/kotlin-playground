@@ -1,4 +1,4 @@
-package io.github.pak3nuh.kotlin.playground.basics
+package io.github.pak3nuh.kotlin.playground.basics.b2_language
 
 /*
 * -------- Control flow

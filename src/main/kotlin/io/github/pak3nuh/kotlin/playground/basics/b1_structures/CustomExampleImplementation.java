@@ -1,4 +1,4 @@
-package io.github.pak3nuh.kotlin.playground.basics;
+package io.github.pak3nuh.kotlin.playground.basics.b1_structures;
 
 import java.lang.annotation.Annotation;
 
