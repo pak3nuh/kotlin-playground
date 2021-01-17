@@ -2,6 +2,9 @@ package io.github.pak3nuh.kotlin.playground.basics;
 
 import java.lang.annotation.Annotation;
 
+/**
+ * Custom implementation of the {@link Example} kotlin annotation.
+ */
 public final class CustomExampleImplementation {
 
     public static class ExampleMock implements Example {
