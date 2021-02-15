@@ -1,5 +1,7 @@
 package io.github.pak3nuh.kotlin.playground.basics
 
+import io.github.pak3nuh.kotlin.playground.basics.b1_structures.Car
+
 /*-------- Operators
 * In Kotlin operators are just functions that have a special signature.
 *
