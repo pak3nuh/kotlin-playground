@@ -1,7 +1,7 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    kotlin("jvm") version "1.4.10"
+    kotlin("jvm") version "1.4.30"
     `java-library`
 }
 
@@ -11,6 +11,12 @@ repositories {
 
 tasks.withType<KotlinCompile>{
     kotlinOptions.jvmTarget = "1.8"
+    kotlinOptions.languageVersion = "1.5"
+    kotlinOptions.freeCompilerArgs = listOf("-Xinline-classes")
+}
+
+tasks.withType<org.jetbrains.kotlin.gradle.dsl.KotlinJvmCompile> {
+    kotlinOptions.useIR = true
 }
 
 tasks.withType<Test> {
