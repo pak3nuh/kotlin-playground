@@ -9,7 +9,7 @@ repositories {
     mavenCentral()
 }
 
-tasks.withType<KotlinCompile>{
+tasks.withType<KotlinCompile> {
     kotlinOptions.jvmTarget = "1.8"
     kotlinOptions.languageVersion = "1.5"
     kotlinOptions.freeCompilerArgs = listOf("-Xinline-classes")
