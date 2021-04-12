@@ -25,6 +25,7 @@ tasks.withType<Test> {
 
 dependencies {
     implementation(platform("org.jetbrains.kotlin:kotlin-bom"))
+    implementation("io.arrow-kt:arrow-core:0.13.1")
 //    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 //    testImplementation("org.jetbrains.kotlin:kotlin-test")
 //    testImplementation("org.jetbrains.kotlin:kotlin-test-junit")
